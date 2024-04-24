@@ -1,24 +1,27 @@
 const navSelector = document.getElementById("nav")
 
 const options = [
-    { title: "Ofertas de la semana", linkTo: "./outlet.html",opts: ["Laptops", "Audio", "Auticulares"]},
-    { title: "Productos", linkTo: "./how.html", opts: ["Formas de pago", "Envios", "Devoluciones"]},
-    { title: "Marcas", linkTo: "./taxs.html",opts: ["Impuestos","Facturacion"]},
-    { title: "Contactos", linkTo: "./orders.html" , opts: ["Pedidos", "Lista de deseo"]},
-    { title: "Acerca de", linkTo: "./warranty.html", opts: ["Acerca de ","Email"]  },
+    { title: "Ofertas", linkTo: "./index.html",opts: ["Laptops", "Audio", "Auticulares"]},
+    { title: "Productos", linkTo: "./index.html", opts: ["Formas de pago", "Envios", "Devoluciones"]},
+    { title: "Marcas", linkTo: "./index.html",opts: ["Impuestos","Facturacion"]},
+    { title: "Contactos", linkTo: "./index.html" , opts: ["Pedidos", "Lista de deseo"]},
+    { title: "Acerca de", linkTo: "./index.html", opts: ["Acerca de ","Email"]  },
 ];
 
-for(let option of options){
-    const anchor = document.createElement("a")
-    anchor.className = "nav-button"
-    anchor.style.padding= "40px"
-    anchor.style.color = "white" 
-    anchor.style.textDecoration = "none"
-    anchor.style.fontSize = "20px"
-    anchor.textContent = option.title
-    anchor.href = option.linkTo
-    navSelector.appendChild(anchor)  
+//ELEMENTOS DOM DEL NAV
+const ul = document.createElement("ul");
+for (let option of options) {
+    
+    const li = document.createElement("li"); // crea el elemento li
+    const anchor = document.createElement("a"); // Crear un enlace y configurar sus propiedades
+    anchor.textContent = option.title;
+    anchor.style.margin="20px";
+    anchor.href = option.linkTo;
+
+    li.appendChild(anchor); // Agregar el enlace al elemento de lista    
+    ul.appendChild(li);// Agregar el elemento de lista a la lista ordenada
 }
+navSelector.appendChild(ul);
 
 //ELEMENTOS DOM DEL FOOTER
 const footerSelector = document.querySelector("footer");
