@@ -218,11 +218,11 @@ class Product {
         this.description=description
     }
 }
-const prod1 = new Product("001100abc","Laptop","1600","50","https://falabella.scene7.com/is/image/FalabellaPE/883085754_1?wid=1500&hei=1500&qlt=70","True","Amazon","Plomo","Laptop de 14'")
-const prod2 = new Product("001111abc","Tablet","1000","20","https://falabella.scene7.com/is/image/FalabellaPE/883085754_1?wid=1500&hei=1500&qlt=70","True","Aliexpres","Negro","Tablet Samsung");
-const prod3 = new Product("001122abc","Smartphone","1200","40","https://falabella.scene7.com/is/image/FalabellaPE/883085754_1?wid=1500&hei=1500&qlt=70","True","AliBaba","Blanco","Motog G54");
-const prod4 = new Product("001133abc","Audifonos","500","30","https://falabella.scene7.com/is/image/FalabellaPE/883085754_1?wid=1500&hei=1500&qlt=70","True","Samsung","Blanco","Audifonos Bluetoh")
-const prod5 = new Product("001133abc","Teclado ","200","20","https://falabella.scene7.com/is/image/FalabellaPE/883085754_1?wid=1500&hei=1500&qlt=70","True","Samsung","Azul","Teclado Mecanico")
-const prod6 = new Product("001133abc","Mouse","120","45","https://falabella.scene7.com/is/image/FalabellaPE/883085754_1?wid=1500&hei=1500&qlt=70","True","Samsung","Plateado","Mouse Gamer")
+const prod1 = new Product("001100abc","laptop mackbook 15'","1600","50","https://falabella.scene7.com/is/image/FalabellaPE/883085754_1?wid=1500&hei=1500&qlt=70","True","Amazon","Plomo","Laptop de 14'")
+const prod2 = new Product("001111abc","tablet lenovo","1000","20","https://falabella.scene7.com/is/image/FalabellaPE/883093716_1?wid=1500&hei=1500&qlt=70","True","Aliexpres","Negro","Tablet Lenovo");
+const prod3 = new Product("001122abc","motorola g54","650","40","https://falabella.scene7.com/is/image/FalabellaPE/20031004_1?wid=800&hei=800&qlt=70","True","AliBaba","Negro","Motog G54");
+const prod4 = new Product("001133abc","airpods pro","500","30","https://falabella.scene7.com/is/image/FalabellaPE/gsc_125316610_4271946_1?wid=1500&hei=1500&qlt=70","True","Samsung","Blanco","Audifonos Bluetoh")
+const prod5 = new Product("001133abc","teclado gamer ","200","20","https://falabella.scene7.com/is/image/FalabellaPE/20074444_1?wid=1500&hei=1500&qlt=70","True","Samsung","Azul","Teclado Mecanico")
+const prod6 = new Product("001133abc","mouse","120","45","https://falabella.scene7.com/is/image/FalabellaPE/gsc_120544236_2713013_2?wid=1500&hei=1500&qlt=70","True","Samsung","Plateado","Mouse Gamer")
 
 const products = [prod1,prod2,prod3,prod4,prod5,prod6];
