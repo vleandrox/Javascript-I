@@ -205,6 +205,7 @@
 
 //---------------------------------
 //**OTRO TEMA EN DONDE SE USA DOM  */
+
 class Product {
     constructor(id,title,price,stock,images,onsale,supplier,colors,description){
         this.id=id
@@ -218,11 +219,19 @@ class Product {
         this.description=description
     }
 }
-const prod1 = new Product("001100abc","laptop mackbook 15'","1600","50","https://falabella.scene7.com/is/image/FalabellaPE/883085754_1?wid=1500&hei=1500&qlt=70","True","Amazon","Plomo","Laptop de 14'")
-const prod2 = new Product("001111abc","tablet lenovo","1000","20","https://falabella.scene7.com/is/image/FalabellaPE/883093716_1?wid=1500&hei=1500&qlt=70","True","Aliexpres","Negro","Tablet Lenovo");
-const prod3 = new Product("001122abc","motorola g54","650","40","https://falabella.scene7.com/is/image/FalabellaPE/20031004_1?wid=800&hei=800&qlt=70","True","AliBaba","Negro","Motog G54");
-const prod4 = new Product("001133abc","airpods pro","500","30","https://falabella.scene7.com/is/image/FalabellaPE/gsc_125316610_4271946_1?wid=1500&hei=1500&qlt=70","True","Samsung","Blanco","Audifonos Bluetoh")
-const prod5 = new Product("001133abc","teclado gamer ","200","20","https://falabella.scene7.com/is/image/FalabellaPE/20074444_1?wid=1500&hei=1500&qlt=70","True","Samsung","Azul","Teclado Mecanico")
-const prod6 = new Product("001133abc","mouse","120","45","https://falabella.scene7.com/is/image/FalabellaPE/gsc_120544236_2713013_2?wid=1500&hei=1500&qlt=70","True","Samsung","Plateado","Mouse Gamer")
+const imagenProd1=["https://falabella.scene7.com/is/image/FalabellaPE/883085754_1?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/17924885_2?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/17924885_4?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/17924885_5?wid=1500&hei=1500&qlt=70"]
+const imagenProd2=["https://falabella.scene7.com/is/image/FalabellaPE/883093716_1?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/883085762_3?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/883085762_4?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/883085762_2?wid=1500&hei=1500&qlt=70"]
+const imagenProd3=["https://falabella.scene7.com/is/image/FalabellaPE/20031004_1?wid=800&hei=800&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20031004_2?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20031004_4?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20031004_3?wid=1500&hei=1500&qlt=70"]
+const imagenProd4=["https://falabella.scene7.com/is/image/FalabellaPE/gsc_125316610_4271946_1?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20073386_4?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20073386_5?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20073386_1?wid=1500&hei=1500&qlt=70"]
+const imagenProd5=["https://falabella.scene7.com/is/image/FalabellaPE/20074444_1?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20074444_2?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20074444_3?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20074444_5?wid=1500&hei=1500&qlt=70"]   
+const imagenProd6=["https://falabella.scene7.com/is/image/FalabellaPE/gsc_120544236_2713013_2?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/gsc_120544236_2713013_3?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/gsc_120544236_2713013_1?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/gsc_120544236_2713013_2?wid=1500&hei=1500&qlt=70"]
+
+const prod1 = new Product("P001LM","laptop mackbook 15'","1600","50",imagenProd1,"True","Amazon",["Plomo", "Negro", "Blanco","Azul"],"Laptop de 14'")
+const prod2 = new Product("P002TL","tablet lenovo","1000","20",imagenProd2,"True","Aliexpres",["Plomo", "Negro", "Blanco","Azul"],"Tablet Lenovo");
+const prod3 = new Product("P003MG","motorola g54","650","40",imagenProd3,"True","AliBaba",["Plomo", "Negro", "Blanco","Azul"],"Motog G54");
+const prod4 = new Product("P004AP","airpods pro","500","30",imagenProd4,"True","Samsung",["Plomo", "Negro", "Blanco","Azul"],"Audifonos Bluetoh")
+const prod5 = new Product("P005TC","teclado gamer ","200","20",imagenProd5,"True","Samsung",["Plomo", "Negro", "Blanco","Azul"],"Teclado Mecanico")
+const prod6 = new Product("P006MI","mouse","120","45",imagenProd6,"True","Samsung",["Plomo", "Negro", "Blanco","Azul"],"Mouse Gamer")
 
 const products = [prod1,prod2,prod3,prod4,prod5,prod6];
+

@@ -52,19 +52,14 @@ for (const option of options) {
 
     footerSelector.querySelector(".columns-container").appendChild(col);
 }
-// for (const option of options) {
-//     const anchor = document.createElement("li")    
-//     anchor.textContent=option.title
-//     anchor.href = option.linkTo    
-//     anchor.style.padding="20px"
-//     anchor.style.display="flex"
-//     anchor.style.justifyContent="space-between"
-//     anchor.style.flexDirection="column"
-//     footerSelector.appendChild(anchor) 
-//     for (const columna of options) {
-//         const col = document.createElement("a")
-//         col.textContent=columna.opts
-//         footerSelector.appendChild(col)    
-//     }
-// } 
 
+//ELEMENTOS DEL SEARCH
+const searchSelectorDom = document.getElementById("search");
+
+// Crear el elemento input
+const searchInput = document.createElement("input");
+searchInput.setAttribute("type", "text");
+searchInput.setAttribute("placeholder", "Search");
+
+// Agregar el input al formulario
+searchSelectorDom.appendChild(searchInput);
