@@ -16,7 +16,6 @@
 
 //**--------------------------------------------------------------------------------------**
 // *** FILTRA CON EL TECLADO  ***
-
 function actualizarVista(productos) {
     let productsTemplate = ""; // Inicializa vacio
     for (const element of productos) { 
