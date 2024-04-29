@@ -6,15 +6,37 @@ const id = params.get('id');
 console.log(id);
 
 
+
+function changeMini(event){
+  const selectedSrc = event.target.src ;
+  console.log(selectedSrc)
+  const bigSelector = document.querySelector("#bigImg");
+  bigSelector.src = selectedSrc;
+}
+
+function changeSubtotal(event) {
+  //const cantidad = document.getElementById("change").value; //obtener el valor del input
+  //console.log(cantidad)
+  const cantidad = event.target.value; // Obtener el valor del input
+  console.log(cantidad)
+  const productoActual = products.find((each) => each.id === id); // Obtener el ID del producto actual
+  console.log(productoActual)
+  const subtotal = productoActual.price * cantidad; // Calcular el subtotal del producto actual
+  console.log(subtotal);
+  const inputSelector = document.querySelector("#subtotal")// Selecionas el elemento para renderizar
+  inputSelector.textContent = `S/. ${subtotal}`
+  console.log(inputSelector)
+}
+
 function printDetails(id) {
     const product = products.find((each) => each.id === id);
     const detailsTemplate =
     `<div class="columns-container">
       <div class="product-images-block">
         <div class="thumbnail-container">
-          ${product.images.map((each) => `<img class="miniImg" src="${each}" alt="mini" />`).join("")}
+          ${product.images.map((each) => `<img class="miniImg"  src="${each}" alt="mini" onclick=changeMini(event) />`).join("")}
         </div>                        
-        <img class="main-image" src="${product.images[0]}" alt="${product.title}"/>                  
+        <img class="main-image" id="bigImg" src="${product.images[0]}" alt="${product.title}"/>                  
     </div>
     <div class="product-description-block">
         <h1 class="title">${product.title}</h1>
@@ -34,7 +56,7 @@ function printDetails(id) {
     <div class="product-checkout-block">
       <div class="checkout-container">
         <span class="checkout-total-label">Total:</span>
-        <h2 class="checkout-total-price">S/.${product.price}</h2>
+        <h2 class="checkout-total-price" id="subtotal">S/.${product.price}</h2>
         <p class="checkout-description">
           Incluye impuesto PAIS y percepción AFIP. Podés recuperar AR$ 50711
           haciendo la solicitud en AFIP.
@@ -51,7 +73,7 @@ function printDetails(id) {
         </ul>
         <div class="checkout-process">
           <div class="top">
-            <input type="number" value="1" />
+            <input type="number" value="1" onchange=changeSubtotal(event) id="change"/>
             <button class="btn-primary">Comprar</button>
           </div>
           <div class="bottom">

@@ -8,9 +8,9 @@ html{
 /*Aplicando Estilos a Header*/
 header{
     border: 1px solid red;
-    height: 152px; /* Height define una altura fija*/
+    height: 120px; /* Height define una altura fija*/
     background-color: #ff3b3c;
-    padding-top: 1em;
+    padding: 1em 0.5em 1em 0.5em;
 }
 
 /*Estilos para header*/
@@ -61,6 +61,9 @@ header{
     text-align: left;
     text-decoration: none;
 }
+a{
+    text-decoration: none;
+}
 .nav ul li a:hover{
     text-decoration: underline;
 }
@@ -88,7 +91,7 @@ main {
 /* Estilos para SECTION */
 section#hero{
     /* border: 1px solid purple; */
-    height: 340px;
+    height: 250px;
     background:url('../assets/hero_bg.png');
     background-size: cover; /*Garantiza imagen de fondo cubra toda area*/
     background-position: top center; /*Coloca iamgen en centro de la seccion y parte superior*/
@@ -268,6 +271,10 @@ footer .container {
         justify-content: center;
         text-align: center;
     }
+    .nav{
+        display: none;
+    }
+
 }
 
 /* Estilos para pantallas medianas, como tabletas */

@@ -225,13 +225,18 @@ const imagenProd3=["https://falabella.scene7.com/is/image/FalabellaPE/20031004_1
 const imagenProd4=["https://falabella.scene7.com/is/image/FalabellaPE/gsc_125316610_4271946_1?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20073386_4?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20073386_5?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20073386_1?wid=1500&hei=1500&qlt=70"]
 const imagenProd5=["https://falabella.scene7.com/is/image/FalabellaPE/20074444_1?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20074444_2?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20074444_3?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20074444_5?wid=1500&hei=1500&qlt=70"]   
 const imagenProd6=["https://falabella.scene7.com/is/image/FalabellaPE/gsc_120544236_2713013_2?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/gsc_120544236_2713013_3?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/gsc_120544236_2713013_1?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/gsc_120544236_2713013_2?wid=1500&hei=1500&qlt=70"]
+const imagenProd7=["https://falabella.scene7.com/is/image/FalabellaPE/882863250_01?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/882863250_02?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/882863250_05?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/882863250_04?wid=1500&hei=1500&qlt=70"]
+const imagenProd8=["https://falabella.scene7.com/is/image/FalabellaPE/20224970_1?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20224970_2?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20224970_3?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20224970_5?wid=1500&hei=1500&qlt=70"]
 
-const prod1 = new Product("P001LM","laptop mackbook 15'","1600","50",imagenProd1,"True","Amazon",["Plomo", "Negro", "Blanco","Azul"],"Laptop de 14'")
-const prod2 = new Product("P002TL","tablet lenovo","1000","20",imagenProd2,"True","Aliexpres",["Plomo", "Negro", "Blanco","Azul"],"Tablet Lenovo");
-const prod3 = new Product("P003MG","motorola g54","650","40",imagenProd3,"True","AliBaba",["Plomo", "Negro", "Blanco","Azul"],"Motog G54");
-const prod4 = new Product("P004AP","airpods pro","500","30",imagenProd4,"True","Samsung",["Plomo", "Negro", "Blanco","Azul"],"Audifonos Bluetoh")
-const prod5 = new Product("P005TC","teclado gamer ","200","20",imagenProd5,"True","Samsung",["Plomo", "Negro", "Blanco","Azul"],"Teclado Mecanico")
-const prod6 = new Product("P006MI","mouse","120","45",imagenProd6,"True","Samsung",["Plomo", "Negro", "Blanco","Azul"],"Mouse Gamer")
+const prod1 = new Product("P001LM","Laptop Mackbook 15'","1600","50",imagenProd1,"True","Amazon",["Plomo", "Negro", "Blanco","Azul"],"Laptop de 14'")
+const prod2 = new Product("P002TL","Tablet Lenovo 4GB 128GB","1000","20",imagenProd2,"True","Aliexpres",["Plomo", "Negro", "Blanco","Azul"],"Tablet Lenovo");
+const prod3 = new Product("P003MG","Motorola G54","650","40",imagenProd3,"True","AliBaba",["Plomo", "Negro", "Blanco","Azul"],"Motog G54");
+const prod4 = new Product("P004AP","AirPods Pro","500","30",imagenProd4,"True","Samsung",["Plomo", "Negro", "Blanco","Azul"],"Audifonos Bluetoh")
+const prod5 = new Product("P005TC","Teclado Gamer ","200","20",imagenProd5,"True","Samsung",["Plomo", "Negro", "Blanco","Azul"],"Teclado Mecanico")
+const prod6 = new Product("P006MI","Mouse","120","45",imagenProd6,"True","Samsung",["Plomo", "Negro", "Blanco","Azul"],"Mouse Gamer")
+const prod7 = new Product("P007ML","Monitor Lenovo G27","980","45",imagenProd7,"True","Lenovo",["Plomo", "Negro", "Blanco","Azul"],"Monito lenovo de 27pulgadas")
+const prod8 = new Product("P008NS","Nintendo Switch","1499","45",imagenProd8,"True","Nintendo",["Plomo", "Negro", "Rojjo","Azul"],"Nintendo Switch Oled Mario Red")
 
-const products = [prod1,prod2,prod3,prod4,prod5,prod6];
+
+const products = [prod1,prod2,prod3,prod4,prod5,prod6,prod7,prod8];
 
