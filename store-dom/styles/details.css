@@ -8,9 +8,9 @@ html{
 /*Aplicando Estilos a Header*/
 header{
     border: 1px solid red;
-    height: 152px; /* Height define una altura fija*/
+    height: 120px; /* Height define una altura fija*/
     background-color: #ff3b3c;
-    padding-top: 1em;
+    padding: 1em 0.5em 1em 0.5em;
 }
 
 /*Estilos para header*/
@@ -190,7 +190,7 @@ main .columns-container {
     height: 30px;
     border-radius: 8px;
     border: none;
-    width: 55px;
+    width: 65px;
     margin-right: 10px;    
     padding: 0 10px 0 20px;
     box-sizing: border-box;    
@@ -354,6 +354,9 @@ footer .columns-container {
     .container .columns-container{
         justify-content: center;
         text-align: center;
+    }
+    .nav{
+        display: none;
     }
 }
 
