@@ -1,15 +1,13 @@
-const query = location.search
-console.log(query)
-const params= new URLSearchParams(query) ;
-console.log(params)
-const id = params.get('id');
+const query = location.search;
+console.log(query);
+const params = new URLSearchParams(query);
+console.log(params);
+const id = params.get("id");
 console.log(id);
 
-
-
-function changeMini(event){
-  const selectedSrc = event.target.src ;
-  console.log(selectedSrc)
+function changeMini(event) {
+  const selectedSrc = event.target.src;
+  console.log(selectedSrc);
   const bigSelector = document.querySelector("#bigImg");
   bigSelector.src = selectedSrc;
 }
@@ -18,33 +16,65 @@ function changeSubtotal(event) {
   //const cantidad = document.getElementById("change").value; //obtener el valor del input
   //console.log(cantidad)
   const cantidad = event.target.value; // Obtener el valor del input
-  console.log(cantidad)
+  console.log(cantidad);
   const productoActual = products.find((each) => each.id === id); // Obtener el ID del producto actual
-  console.log(productoActual)
+  console.log(productoActual);
   const subtotal = productoActual.price * cantidad; // Calcular el subtotal del producto actual
   console.log(subtotal);
-  const inputSelector = document.querySelector("#subtotal")// Selecionas el elemento para renderizar
-  inputSelector.textContent = `S/. ${subtotal}`
-  console.log(inputSelector)
+  const inputSelector = document.querySelector("#subtotal"); // Selecionas el elemento para renderizar
+  inputSelector.textContent = `S/. ${subtotal}`;
+  console.log(inputSelector);
+}
+
+function saveProduct(id) {
+  const found = products.find((each) => each.id === id);
+  const product = {
+    id: id,
+    title: found.title,
+    image: found.images[0],
+    color: document.querySelector("#color").value,
+    quantity: document.querySelector("#quantity").value,
+    subtotal: found.price * quantity.value,
+  };
+  if (localStorage.getItem("cart")) {
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    console.log(cart)
+    cart.push(product);
+    localStorage.setItem("cart", JSON.stringify(cart));    
+    console.log(localStorage)
+  } else {
+    let cart = [product];
+    console.log(cart)
+    localStorage.setItem("cart", JSON.stringify(cart));  
+    console.log(localStorage)
+  }
 }
 
 function printDetails(id) {
-    const product = products.find((each) => each.id === id);
-    const detailsTemplate =
-    `<div class="columns-container">
+  const product = products.find((each) => each.id === id);
+  const detailsTemplate = `<div class="columns-container">
       <div class="product-images-block">
         <div class="thumbnail-container">
-          ${product.images.map((each) => `<img class="miniImg"  src="${each}" alt="mini" onclick=changeMini(event) />`).join("")}
+          ${product.images
+            .map(
+              (each) =>
+                `<img class="miniImg"  src="${each}" alt="mini" onclick=changeMini(event) />`
+            )
+            .join("")}
         </div>                        
-        <img class="main-image" id="bigImg" src="${product.images[0]}" alt="${product.title}"/>                  
+        <img class="main-image" id="bigImg" src="${product.images[0]}" alt="${
+    product.title
+  }"/>                  
     </div>
     <div class="product-description-block">
         <h1 class="title">${product.title}</h1>
         <form class="selector">
             <fieldset>
               <label class="label" for="color">Color</label>
-              <select type="text" placeholder="Selecciona un color">
-                ${product.colors.map((each) => `<option value=${each}>${each}</option>`).join("")}
+              <select type="text" id="color" placeholder="Selecciona un color">
+                ${product.colors
+                  .map((each) => `<option value=${each}>${each}</option>`)
+                  .join("")}
               </select>
             </fieldset>
         </form>
@@ -73,19 +103,20 @@ function printDetails(id) {
         </ul>
         <div class="checkout-process">
           <div class="top">
-            <input type="number" value="1" onchange=changeSubtotal(event) id="change"/>
+            <input type="number" value="1" id="quantity" onchange=changeSubtotal(event) id="change"/>
             <button class="btn-primary">Comprar</button>
           </div>
           <div class="bottom">
-            <button class="btn-outline">Añadir al Carrito</button>
+            <button class="btn-outline" id="${
+              product.id
+            }" onclick=saveProduct(id) >Añadir al Carrito</button>
           </div>
         </div>
       </div>                  
     </div>
 </div>
     `;
-    const detailsSelector = document.querySelector("#details");
-    detailsSelector.innerHTML = detailsTemplate;
-  }
-printDetails(id)
-
+  const detailsSelector = document.querySelector("#details");
+  detailsSelector.innerHTML = detailsTemplate;
+}
+printDetails(id);
