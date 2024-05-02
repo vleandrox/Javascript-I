@@ -34,8 +34,11 @@ function saveProduct(id) {
     image: found.images[0],
     color: document.querySelector("#color").value,
     quantity: document.querySelector("#quantity").value,
+    price:found.price,
     subtotal: found.price * quantity.value,
+    description:found.description
   };
+  console.log(product)
   if (localStorage.getItem("cart")) {
     let cart = JSON.parse(localStorage.getItem("cart"));
     console.log(cart)
@@ -107,9 +110,7 @@ function printDetails(id) {
             <button class="btn-primary">Comprar</button>
           </div>
           <div class="bottom">
-            <button class="btn-outline" id="${
-              product.id
-            }" onclick=saveProduct(id) >Añadir al Carrito</button>
+            <button class="btn-outline" id="${product.id}" onclick=saveProduct(id) >Añadir al Carrito</button>
           </div>
         </div>
       </div>                  
