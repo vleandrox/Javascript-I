@@ -228,14 +228,14 @@ const imagenProd6=["https://falabella.scene7.com/is/image/FalabellaPE/gsc_120544
 const imagenProd7=["https://falabella.scene7.com/is/image/FalabellaPE/882863250_01?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/882863250_02?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/882863250_05?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/882863250_04?wid=1500&hei=1500&qlt=70"]
 const imagenProd8=["https://falabella.scene7.com/is/image/FalabellaPE/20224970_1?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20224970_2?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20224970_3?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20224970_5?wid=1500&hei=1500&qlt=70"]
 
-const prod1 = new Product("P001LM","Laptop Mackbook 15'","1600","50",imagenProd1,"True","Amazon",["Plomo", "Negro", "Blanco","Azul"],"Laptop de 14'")
-const prod2 = new Product("P002TL","Tablet Lenovo 4GB 128GB","1000","20",imagenProd2,"True","Aliexpres",["Plomo", "Negro", "Blanco","Azul"],"Tablet Lenovo");
-const prod3 = new Product("P003MG","Motorola G54","650","40",imagenProd3,"True","AliBaba",["Plomo", "Negro", "Blanco","Azul"],"Motog G54");
-const prod4 = new Product("P004AP","AirPods Pro","500","30",imagenProd4,"True","Samsung",["Plomo", "Negro", "Blanco","Azul"],"Audifonos Bluetoh")
-const prod5 = new Product("P005TC","Teclado Gamer ","200","20",imagenProd5,"True","Samsung",["Plomo", "Negro", "Blanco","Azul"],"Teclado Mecanico")
-const prod6 = new Product("P006MI","Mouse","120","45",imagenProd6,"True","Samsung",["Plomo", "Negro", "Blanco","Azul"],"Mouse Gamer")
-const prod7 = new Product("P007ML","Monitor Lenovo G27","980","45",imagenProd7,"True","Lenovo",["Plomo", "Negro", "Blanco","Azul"],"Monito lenovo de 27pulgadas")
-const prod8 = new Product("P008NS","Nintendo Switch","1499","45",imagenProd8,"True","Nintendo",["Plomo", "Negro", "Rojjo","Azul"],"Nintendo Switch Oled Mario Red")
+const prod1 = new Product("P001LM","Laptop Mackbook 15'","1600","50",imagenProd1,"True","Tiendamia",["Plomo", "Negro", "Blanco","Azul"],"MacBook 15' 2024 M3 Chip 8-core with 10-core GPU 256GB 8GB (2880x1864)")
+const prod2 = new Product("P002TL","Tablet Lenovo 4GB 128GB","1000","20",imagenProd2,"True","Tiendamia",["Plomo", "Negro", "Blanco","Azul"],"Tablet Lenovo");
+const prod3 = new Product("P003MG","Motorola G54","650","40",imagenProd3,"True","Tiendamia",["Plomo", "Negro", "Blanco","Azul"],"Motog G54");
+const prod4 = new Product("P004AP","AirPods Pro","500","30",imagenProd4,"True","Tiendamia",["Plomo", "Negro", "Blanco","Azul"],"Audifonos Bluetoh")
+const prod5 = new Product("P005TC","Teclado Gamer ","200","20",imagenProd5,"True","Tiendamia",["Plomo", "Negro", "Blanco","Azul"],"Teclado Mecanico")
+const prod6 = new Product("P006MI","Mouse","120","45",imagenProd6,"True","Tiendamia",["Plomo", "Negro", "Blanco","Azul"],"Mouse Gamer")
+const prod7 = new Product("P007ML","Monitor Lenovo G27","980","45",imagenProd7,"True","Tiendamia",["Plomo", "Negro", "Blanco","Azul"],"Monito lenovo de 27pulgadas")
+const prod8 = new Product("P008NS","Nintendo Switch","1499","45",imagenProd8,"True","Tiendamia",["Plomo", "Negro", "Rojjo","Azul"],"Nintendo Switch Oled Mario Red")
 
 
 const products = [prod1,prod2,prod3,prod4,prod5,prod6,prod7,prod8];
