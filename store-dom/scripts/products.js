@@ -219,16 +219,16 @@ class Product {
         this.description=description
     }
 }
-const imagenProd1=["https://falabella.scene7.com/is/image/FalabellaPE/883085754_1?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/17924885_2?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/17924885_4?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/17924885_5?wid=1500&hei=1500&qlt=70"]
-const imagenProd2=["https://falabella.scene7.com/is/image/FalabellaPE/883093716_1?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/883085762_3?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/883085762_4?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/883085762_2?wid=1500&hei=1500&qlt=70"]
-const imagenProd3=["https://falabella.scene7.com/is/image/FalabellaPE/20031004_1?wid=800&hei=800&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20031004_2?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20031004_4?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20031004_3?wid=1500&hei=1500&qlt=70"]
-const imagenProd4=["https://falabella.scene7.com/is/image/FalabellaPE/gsc_125316610_4271946_1?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20073386_4?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20073386_5?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20073386_1?wid=1500&hei=1500&qlt=70"]
-const imagenProd5=["https://falabella.scene7.com/is/image/FalabellaPE/20074444_1?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20074444_2?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20074444_3?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20074444_5?wid=1500&hei=1500&qlt=70"]   
-const imagenProd6=["https://falabella.scene7.com/is/image/FalabellaPE/gsc_120544236_2713013_2?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/gsc_120544236_2713013_3?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/gsc_120544236_2713013_1?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/gsc_120544236_2713013_2?wid=1500&hei=1500&qlt=70"]
-const imagenProd7=["https://falabella.scene7.com/is/image/FalabellaPE/882863250_01?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/882863250_02?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/882863250_05?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/882863250_04?wid=1500&hei=1500&qlt=70"]
-const imagenProd8=["https://falabella.scene7.com/is/image/FalabellaPE/20224970_1?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20224970_2?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20224970_3?wid=1500&hei=1500&qlt=70","https://falabella.scene7.com/is/image/FalabellaPE/20224970_5?wid=1500&hei=1500&qlt=70"]
+const imagenProd1=["./assets/laptop1.jfif","./assets/laptop2.jfif","./assets/laptop3.jfif","./assets/laptop4.jfif"]
+const imagenProd2=["./assets/tablet1.jfif","./assets/tablet2.jfif","./assets/tablet3.jfif","./assets/tablet4.jfif"]
+const imagenProd3=["./assets/motorola1.jfif","./assets/motorola2.jfif","./assets/motorola3.jfif","./assets/motorola4.jfif"]
+const imagenProd4=["./assets/AirPods1.jfif","./assets/AirPods2.jfif","./assets/AirPods3.jfif","./assets/AirPods4.jfif"]
+const imagenProd5=["./assets/teclado1.jfif","./assets/teclado2.jfif","./assets/teclado3.jfif","./assets/teclado4.jfif"]   
+const imagenProd6=["./assets/mouse1.jfif","./assets/mouse2.jfif","./assets/mouse3.jfif","./assets/mouse4.jfif"]
+const imagenProd7=["./assets/monitor1.jfif","./assets/monitor2.jfif","./assets/monitor3.jfif","./assets/monitor4.jfif"]
+const imagenProd8=["./assets/nintendo1.jfif","./assets/nintendo2.jfif","./assets/nintendo3.jfif","./assets/nintendo4.jfif"]
 
-const prod1 = new Product("P001LM","Laptop Mackbook 15'","1600","50",imagenProd1,"True","Tiendamia",["Plomo", "Negro", "Blanco","Azul"],"MacBook 15' 2024 M3 Chip 8-core with 10-core GPU 256GB 8GB (2880x1864)")
+const prod1 = new Product("P001LM","Laptop Mackbook 15'","1600","50",imagenProd1,"True","Tiendamia",["Plomo", "Negro", "Blanco","Azul"],"MacBook 15' 2024 M3")
 const prod2 = new Product("P002TL","Tablet Lenovo 4GB 128GB","1000","20",imagenProd2,"True","Tiendamia",["Plomo", "Negro", "Blanco","Azul"],"Tablet Lenovo");
 const prod3 = new Product("P003MG","Motorola G54","650","40",imagenProd3,"True","Tiendamia",["Plomo", "Negro", "Blanco","Azul"],"Motog G54");
 const prod4 = new Product("P004AP","AirPods Pro","500","30",imagenProd4,"True","Tiendamia",["Plomo", "Negro", "Blanco","Azul"],"Audifonos Bluetoh")

@@ -52,10 +52,10 @@
       </div>
     </div>
   </section>
-
+  
   <main>
     <div class="container">
-      <div class="cartproduct-container">
+      <div class="cartproduct-container" id="mensajeFinal">
         <article class="detproduct-card" id="cartproducts">
           <!-- <div class="product-card">
             <img src="assets/macbook15-1.jpg" alt="" class="product-img">
@@ -72,18 +72,18 @@
             <div class="product-price">
               <span class="price">S/.1750</span>
             </div>
-          </div> -->
+          </div> -->          
         </article>
         <article class="totproduct-card" id="totalcart">
-          <!-- <span class="titulo-resumen">Resumen del Pedido</span>
-          <div class="totproduct-price">
+          <span class="titulo-resumen">Resumen del Pedido</span>
+          <div class="totproduct-price" >
             <span class="total-resumen">Total</span>
-            <span class="precio-resumen">1000</span>
+            <span class="precio-resumen" id="totalCarrito"> S/. 0 </span>
           </div>
           <div class="product-tax-policy">Incluye impuesto País y percepción AFIP</div>
           <div class="product-comprar">
-            <button class="button-comprar" onclick=""> Comprar</button>
-          </div> -->
+            <button class="button-comprar" onclick="finalizarCompra(event)" id="buyProducts"> Comprar</button>
+          </div>
         </article>
       </div>
     </div>
@@ -99,9 +99,10 @@
   <!-- <script src="scripts/products.js"></script> -->
   <script src="scripts/layouts.js"></script>
   <script src="scripts/products.js"></script>
-  <script src="scripts/productCards.js"></script>
+  <!-- <script src="scripts/productCards.js"></script> -->
   <script src="scripts/filterProduct.js"></script>
   <script src="scripts/cart.js"></script>
+  <script src="scripts/buy.js"></script>
 </body>
 
 </html>

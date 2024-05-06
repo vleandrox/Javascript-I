@@ -74,6 +74,8 @@ section {
 }
 main {
     height: auto; /* Auto se ajusta automaticamente al contenido*/
+    height: 100%;
+    background-color: #eee;
 }
 .container{
     width: 100%; /*Se cammbio del 1220px*/ 
@@ -112,11 +114,10 @@ section#hero .container {
 .cartproduct-container{
     display: flex;
     justify-content: space-evenly;    
-    margin: 2em ;
+    padding: 2em;
 }
 /* DETALLES DE PRODUCT-CARD */
-.detproduct-card{    
-    /* padding: 20px 10px 20px 10px; */
+.detproduct-card{        
     display: flex;   
     border-radius: 10px;     
     flex-direction: column;
@@ -124,10 +125,11 @@ section#hero .container {
 .product-card{ 
     display: flex;
     flex-direction: row;    
-    background-color: lightgray;
+    background-color: white;
     margin: 0.5em;
     padding: 10px;
     border-radius: 10px;
+    justify-content: space-evenly;
 }
 .product-img{
     width: 170px;
@@ -135,12 +137,13 @@ section#hero .container {
     padding: 10px;
     border-radius: 1em;
 }
-.product.info{
-    display: flex;  
-    width: 600%;
+.product-info{
+    display: flex;      
+    flex-direction: column;
+    width: auto;
+    max-width: 400px;
 }
 .product-title{
-    display: block;
     font-size: medium;
     font-weight: 600;
     word-wrap: break-word;
@@ -148,15 +151,12 @@ section#hero .container {
     padding-bottom: 0px;
 }
 .product-color{
-    display: block;
     padding: 10px;
     padding-bottom: 0px;
     font-weight: 400;
 }
 .product-description{
-    display: block;
     padding: 10px;
-    width: 400px;
     padding-bottom: 0;
     font-weight: 400;
 }
@@ -181,8 +181,8 @@ section#hero .container {
 }
 /* DETALLES DE TOTAL-CARD */
 .totproduct-card{
-    background-color: lightgray;
-    padding: 20px 10px;
+    background-color: white;
+    padding: 15px 10px;
     border-radius: 10px;
     height: 165px;
     margin: 0.5em;
@@ -190,9 +190,9 @@ section#hero .container {
 .titulo-resumen{
     display: flex;
     justify-content: center;
-    padding-bottom: 1em;
+    padding-bottom: 0.5em;
     font-weight: 700;
-    font-size: larger;
+    font-size: 18px;
 }
 .totproduct-price{
     display: flex;
@@ -218,7 +218,15 @@ section#hero .container {
     border-radius: 10px;
 }
 
- 
+/*STYLOS */
+.carritovacio{
+    align-items: center;
+    align-content: center;
+    padding: 4em;
+    text-align: center;
+    font-size: larger;
+}
+
 
 
 
@@ -265,35 +273,10 @@ footer .container {
     padding: 1em 3em 1em 3em;
 }
   
-/* @media screen and (max-width: 768px){
-    .product-container{
-        width: 100%;
-        display: block;
-    }
-} */
-
-/*Para usarlos con el FLEX*/
-/* @media only screen and (max-width: 768px) {
-    .product-container {
-        display: flex;
-        flex-wrap: wrap; 
-        justify-content: space-around;
-    }
-    .product-card {
-        width: 45%; 
-        margin-bottom: 20px; 
-    }
-} */
-/* Para que los elementos se envuelvan cuando no haya suficiente espacio */
-/* Para distribuir los elementos de manera uniforme */
-/* Ajustar el ancho de los elementos individuales para que haya espacio entre ellos */
-/* Agregar un margen inferior para separar los elementos */
-
-
-/* Estilos para pantallas más pequeñas, como teléfonos móviles */
+/* MEDIAS QUERYS*/
 @media only screen and (max-width: 768px) {
     header {
-        height: 100px; /* Reducir la altura del encabezado */
+        height: 70px; /* Reducir la altura del encabezado */
     }
     section,
     #hero {
@@ -324,25 +307,39 @@ footer .container {
     .nav{
         display: none;
     }
+
+
+    .cartproduct-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .product-card {
+        align-items: center;
+    }
+    /* .product-img {
+        width: 100px; 
+        max-width: 100px;
+    } */
 }
 
-/* Estilos para pantallas medianas, como tabletas */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    .product-container {
-        grid-template-columns: repeat(2, 1fr); /* Cambiar a una disposición de 3 columnas */
-    }
-    .search .form input{
-        width: 300px;
-    }
-    .container .columns-container{
-        justify-content: center;
-        text-align: center;
-    }
-}
 
-/* Estilos para pantallas grandes, como computadoras de escritorio */
-@media only screen and (min-width: 1025px) {
-    .product-container {
-        grid-template-columns: repeat(2, 1fr); /* Mantener la disposición de 4 columnas */
+@media only screen and (max-width: 425px) {
+    .product-title {
+        font-size: 14px;
+    }
+    .product-color,
+    .product-description {
+        font-size: 12px;
+    }
+    /* .product-img {
+        width: 100px; 
+        max-width: 100px;
+    } */
+    .product-img {    
+        width: 30%;
+        height: 100px;
+    }
+    .product-description{
+        text-align: justify;
     }
 }
