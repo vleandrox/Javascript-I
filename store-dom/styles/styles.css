@@ -147,7 +147,7 @@ section#hero .container {
     font-size: 15px;
     font-weight: 400;
     color: #333;
-    margin: 6px;
+    /* margin: 6px; */
 }
 .product-tax-policy{
     font-size: 9px;   
