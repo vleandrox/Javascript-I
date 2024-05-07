@@ -73,10 +73,12 @@ section {
     height: 340px;
 }
 main {
+    /* border: 1px solid blue; */
     height: auto; /* Auto se ajusta automaticamente al contenido*/
-    height: 100%;
-    background-color: #eee;
+    padding-top: 1em;
 }
+
+
 .container{
     width: 100%; /*Se cammbio del 1220px*/ 
     margin: 0 auto; /*Centrar auto el contenedor elementro padre*/
@@ -84,10 +86,12 @@ main {
     height: inherit;
     min-height: inherit;
 }
+
+
 /* Estilos para SECTION */
 section#hero{
     /* border: 1px solid purple; */
-    height: 200px;
+    height: 250px;
     background:url('../assets/hero_bg.png');
     background-size: cover; /*Garantiza imagen de fondo cubra toda area*/
     background-position: top center; /*Coloca iamgen en centro de la seccion y parte superior*/
@@ -110,140 +114,63 @@ section#hero .container {
     line-height: 80px;
 }
 
-
-.cartproduct-container{
-    display: flex;
-    justify-content: space-evenly;    
-    padding: 2em;
-}
-/* DETALLES DE PRODUCT-CARD */
-.detproduct-card{        
-    display: flex;   
-    border-radius: 10px;     
-    flex-direction: column;    
-}
-.product-card{ 
-    display: flex;
-    flex-direction: row;    
-    background-color: white;
-    margin: 0.5em;
-    padding: 10px;
-    border-radius: 10px;
-    justify-content: space-evenly;
-    position: relative;
-}
+/*Estilos al card*/
 .product-img{
-    width: 170px;
-    height: auto;    
-    padding: 10px;
-    border-radius: 1em;
+    width: 100%; /*Imagen cubre todo el ancho de la tarjeta*/
+    height: 250px; /*Define altura fija*/
+    object-fit: cover; /*Garantizan  la imagen se recorte el enfoque este centrado*/
+    object-position: center center;
+}
+.product-price-block{
+    display: flex;
+    margin: 5px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-card{
+    background-color: #f0f0f0;
+    border-radius: 14px;
+    width: auto;
 }
 .product-info{
-    display: flex;      
-    flex-direction: column;
-    width: auto;
-    max-width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 .product-title{
-    font-size: medium;
+    font-size: 20px;
     font-weight: 600;
-    word-wrap: break-word;
-    padding: 10px;
-    padding-bottom: 0px;
-}
-.product-color{
-    padding: 10px;
-    padding-bottom: 0px;
-    font-weight: 400;
+    word-wrap: break-word;/*Evitar el texto se desborde de su contenedor*/
+    display: block;/*El elemento sigueinte se acomoda de forma vertical*/
+    line-height: 22px;
 }
 .product-description{
-    padding: 10px;
-    padding-bottom: 0;
+    font-size: 15px;
     font-weight: 400;
-}
-.product-quantity{
-    padding: 10px;
-}
-.btn-outline {
-    height: 30px;
-    border-radius: 8px;
-    width: 65px;
-    margin-right: 10px;
-    padding: 0 10px 0 20px;
-    box-sizing: border-box; 
-}
-.product-price{
-    align-items: center; 
-    display: flex;    
-}
-.product-price .price{
-    padding: 10px;
-    font-weight: 600;
-}
-.product-price .btn-eliminar {
-    position: absolute; /* Posicionamiento absoluto */
-    top: 0; /* En la parte superior */
-    right: 0; /* En la parte derecha */
-    margin: 1em;
-    width: 30px;
-    height: 30px;
-    background-image: url('/store-dom/assets/heart.svg');
-    border: none; /* Sin borde */
-    color: white;
-    background-color: white;
-    cursor: pointer;
-}
-
-/* DETALLES DE TOTAL-CARD */
-.totproduct-card{
-    background-color: white;
-    padding: 15px 10px;
-    border-radius: 10px;
-    height: 165px;
-    margin: 0.5em;
-}
-.titulo-resumen{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 0.5em;
-    font-weight: 700;
-    font-size: 18px;
-}
-.totproduct-price{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    font-weight: 600;
-    font-size: larger;
+    color: #333;
+    /* margin: 6px; */
 }
 .product-tax-policy{
-    padding: 10px;
-    font-weight: 300;
+    font-size: 9px;   
 }
-.product-comprar{
-    padding: 10px;
+.product-price-block .price {
+    font-size: 22px;
+    font-weight: 700;
+    flex: 1;
 }
-.product-comprar .button-comprar{
-    width:100%; 
-    background: #ff3b3c;
-    color: white;
-    font-weight: bold;
-    border: none;
-    height: 30px;
-    border-radius: 10px;
+.product-price-block .discount {
+    font-size: 12px;
+    font-weight: 700;
+    color: #428f13;
 }
 
-/*STYLOS */
-.carritovacio{
-    align-items: center;
-    align-content: center;
-    padding: 4em;
-    text-align: center;
-    font-size: larger;
+/*Agregando Estilos grid*/
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:20px;
+    padding: 20px;
+
 }
-
-
-
 
 /*Estilos Footer*/
 footer {
@@ -288,10 +215,13 @@ footer .container {
     padding: 1em 3em 1em 3em;
 }
   
-/* MEDIAS QUERYS*/
-@media only screen and (max-width: 768px) {
+ 
+ 
+
+/* Estilos para pantallas más pequeñas, como teléfonos móviles */
+@media only screen and (max-width: 600px) {
     header {
-        height: 70px; /* Reducir la altura del encabezado */
+        height: 100px; /* Reducir la altura del encabezado */
     }
     section,
     #hero {
@@ -323,38 +253,25 @@ footer .container {
         display: none;
     }
 
-
-    .cartproduct-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .product-card {
-        align-items: center;
-    }
-    /* .product-img {
-        width: 100px; 
-        max-width: 100px;
-    } */
 }
 
+/* Estilos para pantallas medianas, como tabletas */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr); /* Cambiar a una disposición de 3 columnas */
+    }
+    .search .form input{
+        width: 300px;
+    }
+    .container .columns-container{
+        justify-content: center;
+        text-align: center;
+    }
+}
 
-@media only screen and (max-width: 425px) {
-    .product-title {
-        font-size: 14px;
-    }
-    .product-color,
-    .product-description {
-        font-size: 12px;
-    }
-    /* .product-img {
-        width: 100px; 
-        max-width: 100px;
-    } */
-    .product-img {    
-        width: 30%;
-        height: 100px;
-    }
-    .product-description{
-        text-align: justify;
+/* Estilos para pantallas grandes, como computadoras de escritorio */
+@media only screen and (min-width: 1025px) {
+    .product-container {
+        grid-template-columns: repeat(4, 1fr); /* Mantener la disposición de 4 columnas */
     }
 }
