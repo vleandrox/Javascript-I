@@ -115,6 +115,11 @@ section#hero .container {
 }
 
 /*Estilos al card*/
+
+.cards{
+    position: relative;
+}
+
 .product-img{
     width: 100%; /*Imagen cubre todo el ancho de la tarjeta*/
     height: 250px; /*Define altura fija*/
@@ -130,7 +135,7 @@ section#hero .container {
 .product-card{
     background-color: #f0f0f0;
     border-radius: 14px;
-    width: auto;
+    width: auto; 
 }
 .product-info{
     padding: 20px;
@@ -161,6 +166,19 @@ section#hero .container {
     font-size: 12px;
     font-weight: 700;
     color: #428f13;
+}
+ 
+.cards .btn-eliminarfav{
+    position: absolute;
+    background-color: white;
+    border-style: none;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+}
+.imgDel{
+    width: 25px;
+    height: 25px;
 }
 
 /*Agregando Estilos grid*/
