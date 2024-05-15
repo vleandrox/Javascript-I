@@ -5,6 +5,9 @@ html{
     font-family: "Inter", sans-serif;
 }
 
+/*Para el header de iconos*/
+.hidden { display: none; }
+
 /*Aplicando Estilos a Header*/
 header{
     border: 1px solid red;
@@ -21,7 +24,9 @@ header{
     align-items: center;
     /*display: grid;
     grid-template-columns: repeat(3, 1fr); */
-}  
+} 
+
+/*DIV FORM*/
 .search .form{
     box-sizing: border-box;
     display: flex;
@@ -35,9 +40,10 @@ header{
     padding: 20px;
     box-sizing: border-box;
 }
+
 .search .social ul{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-evenly;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -45,6 +51,12 @@ header{
 .search .social ul li{
     padding: 0 10px;
 }
+.search .social ul li i{    
+    color: white; 
+    font-size: 25px;
+}
+
+/*NAV*/
 .nav{
     padding: 30px 0;
 }
@@ -68,25 +80,20 @@ a{
     text-decoration: underline;
 }
 
+
 section {
-    /* border: 1px solid purple; */
     height: 340px;
 }
 main {
-    /* border: 1px solid blue; */
-    height: auto; /* Auto se ajusta automaticamente al contenido*/
+    height: auto;
     padding-top: 1em;
 }
-
-
 .container{
-    width: 100%; /*Se cammbio del 1220px*/ 
+    width: 100%;  
     margin: 0 auto; /*Centrar auto el contenedor elementro padre*/
-    /*border: 1px solid springgreen; Visualizar sus limites*/
     height: inherit;
     min-height: inherit;
 }
-
 
 /* Estilos para SECTION */
 section#hero{
