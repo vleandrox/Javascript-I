@@ -7,7 +7,7 @@ console.log(id);
 
 function changeMini(event) {
   const selectedSrc = event.target.src;
-  console.log(selectedSrc); 
+  console.log(selectedSrc);
   const bigSelector = document.querySelector("#bigImg");
   bigSelector.src = selectedSrc;
 }
@@ -38,18 +38,33 @@ function saveProduct(id) {
     subtotal: found.price * quantity.value,
     description: found.description,
   };
-  console.log(product);
-  if (localStorage.getItem("cart")) {
-    let cart = JSON.parse(localStorage.getItem("cart"));
-    console.log(cart);
+
+  let cart = localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : [];
+  console.log(cart);  
+  // Verificar si el producto ya está en el carrito
+  const productoExiste = cart.find((item) => item.id === id);
+  console.log(productoExiste);
+
+  if (productoExiste) {
+    // Mostrar alerta de que el producto ya está en el carrito
+    Swal.fire({
+      title: "¡Producto ya en el carrito!",
+      text: "El producto ya se encuentra en el carrito y no se añadirá nuevamente.",
+      icon: "info",
+      confirmButtonText: "OK",
+    });
+  } else {
+
+    // Añadir el producto al carrito
     cart.push(product);
     localStorage.setItem("cart", JSON.stringify(cart));
-    console.log(localStorage);
-  } else {
-    let cart = [product];
-    console.log(cart);
-    localStorage.setItem("cart", JSON.stringify(cart));
-    console.log(localStorage);
+
+    Swal.fire({
+      title: "¡Producto añadido!",
+      text: "El producto ha sido añadido al carrito exitosamente.",
+      icon: "success",
+      confirmButtonText: "OK",      
+    });
   }
 }
 
@@ -58,9 +73,16 @@ function printDetails(id) {
   const detailsTemplate = `<div class="columns-container">
       <div class="product-images-block">
         <div class="thumbnail-container">
-          ${product.images.map((each) =>`<img class="miniImg" src="${each}" alt="mini" onclick="changeMini(event)" />`).join("")}
+          ${product.images
+            .map(
+              (each) =>
+                `<img class="miniImg" src="${each}" alt="mini" onclick="changeMini(event)" />`
+            )
+            .join("")}
         </div>                        
-        <img class="main-image" id="bigImg" src="${product.images[0]}" alt="${product.title}"/>                  
+        <img class="main-image" id="bigImg" src="${product.images[0]}" alt="${
+    product.title
+  }"/>                  
     </div>
     <div class="product-description-block">
         <h1 class="title">${product.title}</h1>
@@ -68,7 +90,9 @@ function printDetails(id) {
             <fieldset>
               <label class="label" for="color">Color</label>
               <select type="text" id="color" placeholder="Selecciona un color">
-                ${product.colors.map((each) => `<option value=${each}>${each}</option>`).join("")}
+                ${product.colors
+                  .map((each) => `<option value=${each}>${each}</option>`)
+                  .join("")}
               </select>
             </fieldset>
         </form>
@@ -101,7 +125,9 @@ function printDetails(id) {
             <button class="btn-primary">Comprar</button>
           </div>
           <div class="bottom">
-            <button class="btn-outline" id="${product.id}" onclick=saveProduct(id) >Añadir al Carrito</button>
+            <button class="btn-outline" id="${
+              product.id
+            }" onclick=saveProduct(id) >Añadir al Carrito</button>
           </div>
         </div>
       </div>                  
