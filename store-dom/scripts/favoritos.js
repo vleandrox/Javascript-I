@@ -1,5 +1,4 @@
 const cartfavoritos = JSON.parse(localStorage.getItem("favoritos"));
-const favoritosSelector = document.getElementById("favoritos");
 
 function createFavoritos(cartfavoritos) {
   return `
@@ -20,18 +19,12 @@ function createFavoritos(cartfavoritos) {
         </div> 
     </a>
 </div>`;
-
 }
-let favoritosTemplate = "";
-for (const element of cartfavoritos) {
-  favoritosTemplate = favoritosTemplate + createFavoritos(element);
-}
-favoritosSelector.innerHTML = favoritosTemplate;
 
 
-//**FUNCION ELIMINAR DE FAVORITOS */
 function eliminarFavorito(event) {
-  const obtenerid = event.currentTarget.getAttribute("id"); //Obtiene el id desde el botón 
+  const favoritosSelector = document.getElementById("favoritos");
+  const obtenerid = event.currentTarget.getAttribute("id"); 
 
   // Encontrar el índice del producto a eliminar en el array
   const indexAEliminar = cartfavoritos.findIndex((cartfavoritos) => cartfavoritos.id === obtenerid );
@@ -39,9 +32,32 @@ function eliminarFavorito(event) {
   if (indexAEliminar !== -1) {
     cartfavoritos.splice(indexAEliminar, 1); // Eliminar el producto del array
   }
-
   // Volver a almacenar el array actualizado en el localStorage
   localStorage.setItem("favoritos", JSON.stringify(cartfavoritos));
   const favoritosTemplate = cartfavoritos.map(createFavoritos).join("");
   favoritosSelector.innerHTML = favoritosTemplate;
+  printFavoritos();
+ 
 }
+
+function printFavoritos(){
+  const favoritosSelector = document.getElementById("favoritos");
+  if (cartfavoritos && cartfavoritos.length > 0) {
+    // Si hay productos en el carrito, renderiza los productos
+    favoritosSelector.innerHTML = cartfavoritos.map(createFavoritos).join("");
+  } else {
+    // Si no hay productos en el carrito, renderiza la vista de "carrito vacío"
+    const ventaTerminada = `
+      <article class="detproduct-card" id="cartfavoritos">
+                <div class="product-card">
+                  <div class="carritovacio"> 
+                    <span>SIN PRODUCTOS FAVORITOS.</span>
+                  </div>
+                </div>
+              </article>`;
+    favoritosSelector.innerHTML = ventaTerminada;
+    console.log(cartfavoritos)
+  }
+}
+
+printFavoritos();
